@@ -19,7 +19,7 @@ echo "<h2>DB connection test</h2>";
 $servername = getenv('DB_HOST');
 $username = getenv('DB_USER');
 $password = getenv('DB_PASSWORD');
-$dbname = "cid_generic_api";
+$dbname = getenv('DB_NAME');
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
